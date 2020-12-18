@@ -1,0 +1,98 @@
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Método aleatorio</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/thread.js"></script>
+	<script src="js/aleatorio.js"></script>
+	<!--<script src="js/aleatorio.min.js"></script>-->
+</head>
+
+<body>
+	<div class="row">
+		<div class="col s12 m4" id="variables">
+			<h3 class="center-align">Función objetivo</h3>
+			<p class="center-align">
+				<input type="radio" id="min" name="maxmin" class="with-gap" value="min" checked>
+				<label for="min">Minimizar</label>
+			</p>
+			<p class="center-align">
+				<input type="radio" id="max" name="maxmin" class="with-gap" value="max">
+				<label for="max">Maximizar</label>
+			</p>
+			<div class="input-field col s6 m3">
+				<label for="x1">x<sub>1</sub></label>
+				<input type="number" id="x1">
+			</div>
+		</div>
+		<div class="col s12 m4" id="restricciones">
+			<h3 class="center-align">Restricciones</h3>
+			<div class="input-field col s6 m2">
+				<label for="r11">r<sub>11</sub></label>
+				<input type="number" id="r11">
+			</div>
+			<div class="input-field col s6 m2">
+				<select id="signo1">
+					<option value="ma">>=</option>
+					<option value="me"><=</option>
+					<option value="ig">=</option>
+				</select>
+			</div>
+			<div class="input-field col s6 m2">
+				<label for="res1">Res 1</label>
+				<input type="number" id="res1">
+			</div>
+			<div class="col s12 m12">
+				<hr>
+			</div>
+			<div class="col s12 m12">
+				<h5 class="center-align">x<sub>i</sub> >= 0</h5>
+			</div>
+		</div>
+		<div class="col s12 m4">
+			<h3 class="center-align" id="resultados">Resultados</h3>
+			<div class="input-field col s6 m4">
+				<label for="iteraciones">Iteraciones</label>
+				<input type="number" id="iteraciones" value="1">
+			</div>
+			<div class="input-field col s6 m4">
+				<label for="vectores">Vectores</label>
+				<input type="number" id="vectores" value="1">
+			</div>
+			<div class="input-field col s6 m4">
+				<input type="button" value="Calcular resultado" id="calcular">
+			</div>	
+			<div class="col s12 m12" id="impresion">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="fixed-action-btn click-to-toggle">
+		<a class="btn-floating btn-large waves-effect waves-light blue rigth-align">
+			<i class="material-icons">menu</i>
+		</a>
+		<ul>
+			<li>
+				<a class="btn-floating green" id="agregarVar"><i class="material-icons">extension</i></a>
+			</li>
+			<li>
+				<a class="btn-floating red" id="eliminarVar"><i class="material-icons">extension</i></a>
+			</li>
+			<li>
+				<a class="btn-floating green" id="agregarRestr"><i class="material-icons">do_not_disturb</i></a>
+			</li>
+			<li>
+				<a class="btn-floating red" id="eliminarRestr"><i class="material-icons">do_not_disturb</i></a>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+
+</html>
